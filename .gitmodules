@@ -1,0 +1,8 @@
+[submodule "esg-laravel"]
+	path = backend/esg-laravel
+	url = https://github.com/ESGForumWebSiteDev/project_ESGForumWebSiteDev_laravel-deployment-repo
+  branch = develop
+[submodule "esg-react"]
+	path = frontend/esg-react
+	url = https://github.com/ESGForumWebSiteDev/project_ESGForumWebSiteDev_react-deployment-repo
+  branch = develop
