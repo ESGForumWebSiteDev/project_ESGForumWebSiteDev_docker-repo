@@ -1,7 +1,7 @@
 version: '3'
 services:
   backend:
-    image: esgforum-docker-backend:latest
+    image: ghcr.io/esgforumwebsitedev/esgforum-laravel:latest
     container_name: esg-backend-laravel
     ports:
       - 9000:9000
@@ -9,12 +9,10 @@ services:
       - .env
 
   frontend:
-    image: esgforum-docker-frontend:latest
+    image: ghcr.io/esgforumwebsitedev/esgforum-react:latest
     container_name: esg-web-react
     ports:
       - 8080:80
-    environment:
-      - REACT_APP_API_URL=http://backend/api
 
   proxy:
     image: nginx:1.24.0
