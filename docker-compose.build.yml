@@ -15,12 +15,13 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_URL=http://localhost/api
     container_name: esg-web-react
     ports:
       - 8080:80
     environment:
       - TZ=Asia/Seoul
-      - REACT_APP_API_URL=http://localhost:9000
 
   proxy:
     image: nginx:1.24.0
